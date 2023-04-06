@@ -10,13 +10,13 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 if (number > 0)
 {
-    NaturalNumbers(number);
+    NaturalNumbersRange(number);
 }
 else Console.WriteLine("Введённое число не является натуральним");
 
-void NaturalNumbers(int num)
+void NaturalNumbersRange(int num)
 {
     if (num == 0) return;
     Console.Write($"{num} ");
-    NaturalNumbers(num - 1);
+    NaturalNumbersRange(num - 1);
 }
