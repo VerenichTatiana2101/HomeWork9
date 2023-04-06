@@ -10,13 +10,11 @@ int numM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Вводим второе число N:");
 int numN = Convert.ToInt32(Console.ReadLine());
 
-int result = AckermanFunction(numM, numN);
-
-if (numN >= 0 && numM >= 0)
+if (numM >= 0 && numN >= 0)
 {
-    Console.WriteLine($"{result}");
+    Console.WriteLine($"Значения функции Аккермана для чисел {numM}, {numN} -> {AckermanFunction(numM, numN)}");
 }
-else Console.WriteLine("В качестве параметров функция принимает два неотрицательных целых числа");
+else System.Console.WriteLine("Функция принимает только неотрицательные целые числа");
 
 int AckermanFunction(int n, int m)
 {
@@ -24,5 +22,7 @@ int AckermanFunction(int n, int m)
     else if (m == 0) return AckermanFunction(n - 1, 1);
     else return AckermanFunction(n - 1, AckermanFunction(n, m - 1));
 }
+
+
 
 
